@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: balunywadockernginx 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: balunywadockernginx 
+    spec:
+      containers:
+        - name: balunywadockernginx 
+          image: onems.azurecr.io/balunywadockernginx
+          ports:
+          - containerPort: 80
